@@ -7,7 +7,7 @@ flows:
           - module: header
           - module: navigation-wizard
           - module: descriptive-headline
-          - module: flight-list
+          - module: product-item-flight-list
             submodules:
               - sub: flight-item
               - sub: flight-item
@@ -30,7 +30,7 @@ flows:
         modules: 
           - module: modal-header
           - module: descriptive-headline
-          - module: flight-list
+          - module: product-item-flight-list
             submodules:
               - sub: flight-item
               - sub: flight-item
@@ -87,7 +87,7 @@ flows:
         modules: 
           - module: header
           - module: navigation-wizard
-          - module: flight
+          - module: product-item-flight
           - module: descriptive-headline
           - module: options-cockpit
           - module: teaser
@@ -125,12 +125,12 @@ flows:
           - module: header
           - module: navigation-wizard
           - module: descriptive-headline
-          - module: flight-bound
+          - module: product-item-flight-bound
           - module: product-list
           - module: action-bar
           - module: product-list
           - module: action-bar
-          - module: flight-bound
+          - module: product-item-flight-bound
           - module: product-list
           - module: action-bar
           - module: add-module
@@ -181,8 +181,8 @@ flows:
           - module: header
           - module: navigation-wizard
           - module: descriptive-headline
-          - module: flight-bound
-          - module: flight-bound
+          - module: product-item-flight-bound
+          - module: product-item-flight-bound
           - module: action-bar
           - module: person-checkable
           - module: person-checkable
@@ -200,12 +200,12 @@ flows:
           - module: header
           - module: navigation-wizard
           - module: descriptive-headline
-          - module: flight-bound
+          - module: product-item-flight-bound
           - module: product-list
           - module: action-bar
           - module: product-list
           - module: action-bar
-          - module: flight-bound
+          - module: product-item-flight-bound
           - module: product-list
           - module: action-bar
           - module: product-list
@@ -237,7 +237,7 @@ flows:
         title: Seat Selection
         modules:
           - module: modal-header
-          - module: flight-segment-navigation
+          - module: product-item-flight-segment-navigation
           - module: seat-map
             submodules: 
               - sub: compartment-header
@@ -275,8 +275,8 @@ flows:
           - module: structure-headline
           - module: input-field
           - module: structure-headline
-          - module: date-picker (half-width)
-          - module: date-picker (half-width)
+          - module: date-picker-half
+          - module: date-picker-half
           - module: structure-headline
           - module: pax-counter
           - module: structure-headline
@@ -369,7 +369,7 @@ flows:
         modules: 
           - module: header
           - module: title
-          - module: flight
+          - module: product-item-flight
           - module: descriptive-headline
           - module: options-cockpit
           - module: teaser
@@ -407,9 +407,9 @@ flows:
           - module: filter-bar
           - module: notification-inline
           - module: list-sorter
-          - module: flight
-          - module: flight
-          - module: flight
+          - module: product-item-flight
+          - module: product-item-flight
+          - module: product-item-flight
           - module: action-bar
           - module: navigation-pager
           - module: structure-headline
@@ -422,7 +422,7 @@ flows:
         modules: 
           - module: modal-header
           - module: descriptive-headline
-          - module: flight
+          - module: product-item-flight
           - module: action-bar
           - module: cabin-selection
           - module: action-bar
@@ -449,9 +449,9 @@ flows:
           - module: filter-bar
           - module: notification-inline
           - module: list-sorter
-          - module: flight
+          - module: product-item-flight
           - module: action-bar
-          - module: flight
+          - module: product-item-flight
           - module: action-bar
           - module: fare-label (half-width)
           - module: price-large (half-width)
@@ -464,9 +464,9 @@ flows:
           - module: modal-header
           - module: descriptive-headline
           - module: list-sorter
-          - module: flight
-          - module: flight
-          - module: flight
+          - module: product-item-flight
+          - module: product-item-flight
+          - module: product-item-flight
           - module: navigation-pager
 
   # Check Out
@@ -478,8 +478,8 @@ flows:
           - module: header-no-cart
           - module: navigation-wizard
           - module: descriptive-headline
-          - module: flight
-          - module: car
+          - module: product-item-flight
+          - module: product-item-car
           - module: notification-inline
           - module: summary-footer
           - module: footer
@@ -529,59 +529,525 @@ flows:
 
       - page: 
         title: Check-out - Step 2 - Shipment
+        modules: 
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: introduction
+          - module: add-module
+          - module: structure-headline
+          - module: radio-button-half
+          - module: price-small
+          - module: radio-button-half
+          - module: price-small
+          - module: radio-button-half
+          - module: price-small
+          - module: summary-footer
+          - module: footer
+
       - page: 
         title: Check-out - Modal - Address
+        modules: 
+          - module: modal-header
+          - module: descriptive-headline
+          - module: structure-headline
+          - module: radio-button
+          - module: radio-button
+          - module: input-field
+          - module: input-field
+          - module: input-field
+          - module: input-field
+          - module: input-field
+          - module: input-field-half
+          - module: input-field-half
+          - module: dropdown
+          - module: dropdown
+          - module: check-box
+          - module: button-cta
       - page: 
-        title: Check-out - Step 3 - Payment
+        title: Check-out - Step 3 - Payment (1 of 7)
+        modules: 
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: introduction
+          - module: add-module
+          - module: product-item
+          - module: sum-money
+          - module: instant-form
+          - module: add-module
+          - module: summary-footer
+          - module: footer
       - page: 
         title: Check-out - Modal - Payment
+        modules: 
+          - module: modal-header
+          - module: descriptive-headline
+          - module: structure-headline
+          - module: option-image
+          - module: structure-headline
+          - module: option-image
+          - module: input-field
+          - module: input-field
+          - module: dropdown-half
+          - module: dropdown-half
+          - module: input-field-half
+          - module: info-half
+          - module: structure-headline
+          - module: input-field
+          - module: input-field
+          - module: input-field-half
+          - module: input-field-half
+          - module: dropdown
+          - module: structure-headline
+          - module: text-block-small
+          - module: dropdown
+          - module: text-block-small
+          - module: check-box
+          - module: button-cta
       - page: 
         title: Check-out - Step 4 - Summary
+        modules: 
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: product-item-flight-selectable
+          - module: structure-headline
+          - module: product-list-item
+          - module: product-list-item
+          - module: action-bar
+          - module: structure-headline
+          - module: product-list-item
+          - module: product-list-item
+          - module: action-bar
+          - module: add-module
+          - module: product-list-item
+          - module: sum-money
+          - module: product-list-item
+          - module: product-list-item
+          - module: action-bar
+          - module: add-module
+          - module: product-list-item
+          - module: sum-money
+          - module: product-list-item
+          - module: action-bar
+          - module: structure-headline
+          - module: product-list-item
+          - module: action-bar
+          - module: add-module
+          - module: product-list-item
+          - module: sum-money
+          - module: asterisk-text
+          - module: descriptive-headline
+          - module: add-module
+          - module: check-box
+          - module: add-module
+          - module: add-module
+          - module: structure-headline
+          - module: expandable
+          - module: expandable-2nd
+          - module: expandable-2nd
+          - module: text-block-small
+          - module: check-box
+          - module: total-price-footer
+          - module: text-block-small
+          - module: footer
       - page: 
-        title: Check-out - Modal - Flight details
+        title: Check-out - Modal - Flight details (1 of 3)
+        modules: 
+          - module: modal-header
+          - module: descriptive-headline
+          - module: product-item-flight
+          - module: action-bar
+          - module: product-item-flight
+          - module: action-bar
+          - module: structure-headline
+          - module: expandable
+          - module: expandable
+          - module: introduction
+
       - page: 
-        title: (WIP) Check-out - Step 4b - Partial Confirmation
+        title: (WIP) Check-out - Step 4b - Partial Confirmation (1 of 2)
+        modules: 
+          - module: header
+          - module: title
+          - module: descriptive-headline
+          - module: add-module
+          - module: descriptive-headline
+          - module: add-module
+          - module: sum-money
+          - module: button-cta
+          - module: text-block-small
+          - module: footer
       - page: 
         title: Check-out - Step 5 - Confirmation
+        modules: 
+          - module: header
+          - module: action-bar
+          - module: title
+          - module: notification-success
+          - module: descriptive-headline
+          - module: content-slider
+            submodules:   
+              - sub: teaser
+          - module: descriptive-headline
+          - module: introduction
+          - module: partner-logos
+          - module: content-slider
+            submodules:   
+              - sub: teaser
+          - module: action-bar
+          - module: descriptive-headline
+          - module: accordion-search-widget
+          - module: search-widget-flight
+          - module: accordion-search-widget
+          - module: accordion-search-widget
+          - module: footer
 
   # Shopping Cart
   - title: 'Shopping cart'
     pages: 
       - page: 
         title: Shopping Cart 
-        
+        modules: 
+          - module: header
+          - module: action-bar
+          - module: title
+          - module: descriptive-headline
+          - module: product-item-flight
+          - module: product-item-selectable
+          - module: product-item-icon
+          - module: sum-money
+          - module: action-bar-multi
+          - module: product-item-insurance
+          - module: product-item-selectable
+          - module: sum-money
+          - module: action-bar
+          - module: product-item-flight
+          - module: product-item-selectable
+          - module: sum-money
+          - module: action-bar-multi
+          - module: product-item-car
+          - module: product-item-selectable
+          - module: product-item-icon
+          - module: sum-money
+          - module: action-bar-multi
+          - module: notification-inline
+          - module: notification-inline
+          - module: descriptive-headline
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: sum-money
+          - module: action-bar
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: sum-money
+          - module: action-bar
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: sum-money
+          - module: action-bar
+          - module: descriptive-headline
+          - module: introduction
+          - module: content-slider
+            submodules:
+              - sub: teaser
+          - module: summary-footer
+          - module: footer
+
 
   # My Cockpit
   - title: 'My Cockpit'
     pages: 
       - page: 
-        title: My cockpit - Dashboard
+        title: My cockpit - Dashboard (1 of 3)
+        modules: 
+          - module: header
+          - module: title
+          - module: cockpit-stage
+          - module: list-sorter
+            submodules: 
+              - sub: action-bar-page
+          - module: structure-headline
+          - module: product-item-selectable
+          - module: notification-inline
+          - module: product-item-selectable
+          - module: structure-headline
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-selectable
+          - module: cui-status
+          - module: teaser-small
+          - module: footer
+          
       - page: 
-        title: My cockpit - Product summary
+        title: My cockpit - Product summary (1 of 3)
+        modules: 
+          - module: header
+          - module: plain-button-function
+          - module: title
+          - module: action-bar-page
+          - module: cockpit-stage
+          - module: product-item-selectable
+          - module: notification-inline
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: list-link-item
+          - module: expandable
+          - module: structure-headline
+          - module: teaser-small
+          - module: teaser-small
+          - module: teaser-small
+          - module: structure-headline
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: action-bar
+          - module: teaser-small
+          - module: footer
       - page: 
         title: My cockpit - Product overview
+        modules: 
+          - module: header
+          - module: plain-button-function
+          - module: descriptive-headline
+          - module: action-bar-filter
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: product-item-selectable
+          - module: product-item-voucher
+          - module: teaser-small
+          - module: footer
       - page: 
-        title: My cockpit - Order details
+        title: My cockpit - Order details (1 of 2)
+        modules: 
+          - module: header-no-cart
+          - module: plain-button-function
+          - module: title
+          - module: action-bar-page
+          - module: product-item
+          - module: product-item
+          - module: product-item
+          - module: descriptive-headline
+          - module: product-item-selectable
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: add-module
+          - module: product-item
+          - module: sum-money
+          - module: link-list-item
+          - module: expandable
+          - module: structure-headline
+          - module: product-item-flight
+          - module: product-item-selectable
+          - module: product-item
+          - module: action-bar
+          - module: add-module
+          - module: product-item
+          - module: sum-money
+          - module: link-list-item
+          - module: expandable
+          - module: product-item-selectable
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-icon
+          - module: action-bar
+          - module: add-module
+          - module: product-item
+          - module: sum-money
+          - module: asterisk-text
+          - module: link-list-item
+          - module: expandable
+          - module: descriptive-headline
+          - module: add-module-person
+          - module: add-module-address
+          - module: add-module-address
+          - module: structure-headline
+          - module: expandable
+          - module: expandable-2nd
+          - module: expandable-2nd
+          - module: text-block-small
+          - module: total-price-footer
+          - module: footer
 
   # Rebook
   - title: 'Rebook'
     pages: 
       - page: 
-        title: Rebook - Step 1 - Flights & PAX
+        title: Rebook - Step 1 - Flights & PAX (1 of 2)
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: product-item-flight-min
+          - module: action-bar
+          - module: product-item-flight-min
+          - module: action-bar
+          - module: add-module-confirmed
+          - module: add-module-confirmed
+          - module: add-module-confirmed
+          - module: check-box
+          - module: check-box
+          - module: button-cta
+          - module: footer
+
       - page: 
         title: Rebook - Step 2 - Change Flight data
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: search-widget-flight
+          - module: footer
       - page: 
-        title: Rebook - Step 3 - Flight Results
+        title: Rebook - Step 3 - Flight Results (1 of 2)
+        modules:
+          - module: header-no-cart
+          - module: search-summary-flight
+          - module: navigation-wizard
+          - module: dropdown-half
+          - module: plain-button-function-half
+          - module: descriptive-headline
+          - module: list-sorter
+          - module: product-item-flight
+          - module: product-item-flight
+          - module: product-item-flight
+          - module: action-bar
+          - module: navigation-pager
+          - module: structure-headline
+          - module: introduction
+          - module: introduction
+          - module: footer
+
       - page: 
         title: Rebook - Step 3b - Fare Selection
+        modules: 
+          - module: modal-header
+          - module: descriptive-headline
+          - module: product-item-flight
+          - module: action-bar
+          - module: cabin-selection
+          - module: action-bar
+          - module: fare-selector
+          - module: fare-selector
+          - module: text-item-list
+          - module: action-bar-light
+          - module: fare-selector
+          - module: cabin-selection
+          - module: cabin-selection
+          - module: cabin-selection
+          - module: structure-headline
+          - module: introduction
+          - module: introduction
+          - module: summary-footer
       - page: 
         title: Rebook - Step 4 - Options Page
+        modules:
+          - module: header
+          - module: navigation-wizard
+          - module: product-item-flight
+          - module: descriptive-headline
+          - module: options-cockpit
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser-small
+          - module: teaser-small
+          - module: structure-headline
+          - module: mixed-item-list
+          - module: summary-footer
+          - module: footer
       - page: 
-        title: Rebook - Step 5 - Payment
+        title: Rebook - Step 5 - Payment (1 of 2)
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: check-box
+          - module: introduction
+          - module: add-module
+          - module: product-list-item
+          - module: sum-money-sub
+          - module: sum-money-sub
+          - module: sum-money-sub
+          - module: sum-money
+          - module: instant-form
+          - module: add-module
+          - module: summary-footer
+          - module: footer
       - page: 
         title: Rebook - Step 6 - Summary
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: product-item-selectable
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: add-module-payment
+          - module: product-list-item
+          - module: sum-money-sub
+          - module: sum-money-sub
+          - module: sum-money-sub
+          - module: sum-money
+          - module: notification-inline
+          - module: descriptive-headline
+          - module: add-module-person
+          - module: check-box
+          - module: check-box
+          - module: descriptive-headline
+          - module: expandable
+          - module: expandable-2nd
+          - module: expandable-2nd
+          - module: text-block-small
+          - module: check-box
+          - module: total-price-footer
+          - module: footer
       - page: 
         title: Rebook - Step 7 - Confirmation
+        modules:  
+          - module: header
+          - module: action-bar-page
+          - module: title
+          - module: notification
+          - module: structure-headline
+          - module: introduction
+          - module: descriptive-headline
+          - module: content-slider
+            submodules:
+              - sub: teaser
+          - module: descriptive-headline 
+          - module: introduction 
+          - module: partner-logos 
+          - module: content-slider
+            submodules:
+              - sub: teaser
+          - module: action-bar
+          - module: descriptive-headline 
+          - module: accordion-search-widget
+          - module: search-widget-flight
+          - module: accordion-search-widget
+          - module: accordion-search-widget
+          - module: foooter
 
   # Refund
   - title: 'Refund'
