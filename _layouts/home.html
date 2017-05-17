@@ -2,33 +2,34 @@
 layout: default
 ---
 
-<h1>Floor Plans</h1>
+<div id="title-bar">
+
+  <h1>Floor Plans</h1>
+</div>
 
 {% for item in site.data.floorplans.flows %}
+    <h2 class="flow-title">{{forloop.index}}. {{item.title}}</h2>
 <div class="flow">
 
-    <h2 class="page-title">floor-plan: {{item.title}}</h2>
     {% for page in item.pages %}
   <div class="page-wrapper">
-      <div class="page-wrapper">
-          <h3>
-            page: {{page.title}}
+          <h3 class="page-title">
+            {{page.title}}
           </h3>
         <div class="page">
           <ul class="modules">
           {% for module in page.modules %}
             <li class="module {{module.module}}">
-              mod: {{module.module}}
+              {{module.module}}
               <ul class="submodules">
               {% for submod in module.submodules %}
-                <li class="submodule {{submod.sub}}">sub-mod: {{submod.sub}}</li>
+                <li class="submodule {{submod.sub}}">{{submod.sub}}</li>
               {% endfor %}
               </ul>
             </li>
           {% endfor %}
           </ul>
         </div>
-      </div>
   </div>
     {% endfor %}
 </div>
