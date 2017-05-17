@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+$color1: #76fbcc;
+$color2: #8aeca0;
+$color3: #a0da76;
+$color4: #b5c651;
+$color5: #c9af34;
+$color6: #da9627;
+$color7: #e8792d;
+$color8: #f0583f;
+
+$color1: #d93636;
+$color2: #b38686;
+$color3: #660e00;
+$color4: #e59173;
+$color5: #ff6600;
+$color6: #66381a;
+$color7: #b2742d;
+$color8: #ffaa00;
+$color9: #998226;
+$color10: #403c00;
+$color11: #eef2b6;
+$color12: #c3e639;
+$color13: #61664d;
+$color14: #00cc00;
+$color15: #00b300;
+$color16: #006600;
+$color17: #005900;
+$color18: #0d330d;
+$color19: #8fbf9c;
+$color20: #00e699;
+$color21: #134d41;
+$color22: #3df2e6;
+$color23: #59adb3;
+$color24: #002233;
+$color25: #73b0e6;
+$color26: #607180;
+$color27: #334166;
+$color28: #6c7bd9;
+$color29: #2000f2;
+$color30: #0e0066;
+$color31: #6f00a6;
+$color32: #220033;
+$color33: #a486b3;
+$color34: #d940ff;
+$color35: #b359a1;
+$color36: #ff00aa;
+$color37: #731d56;
+$color38: #ffbfd9;
+$color39: #bf3056;
+$color40: #591628;
+$color41: #332628;
+
+body {
+  padding: 24px;
+}
+
+.flow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(377px); 
+}
+
+.page-wrapper {
+  width: 377px;
+  float: left;
+  margin: 6px;
+}
+
+.page {
+  background-color: #f9f9f9;
+  border:1px solid gray; 
+  width: 375px;
+}
+
+ul  {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+
+  li {
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 12px;
+    text-align: center;
+    color: white;
+  }
+}
+
+.header {
+  background: $color1;
+}
+
+.navigation-wizard {
+  background-color: $color2;
+}
+
+.descriptive-headline {
+  background-color: $color3;
+}
+
+.flight-list {
+  background-color: $color4;
+}
+
+.flight-item {
+  background-color: $color5;
+}
+
+.action-bar {
+  background-color: $color6;
+}
