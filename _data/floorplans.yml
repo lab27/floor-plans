@@ -9,8 +9,8 @@ flows:
           - module: descriptive-headline
           - module: product-item-flight-list
             submodules:
-              - sub: flight-item
-              - sub: flight-item
+              - sub: product-item-flight
+              - sub: product-item-flight
               - sub: action-bar
           - module: person-list
             submodules: 
@@ -32,22 +32,22 @@ flows:
           - module: descriptive-headline
           - module: product-item-flight-list
             submodules:
-              - sub: flight-item
-              - sub: flight-item
+              - sub: product-item-flight
+              - sub: product-item-flight
           - module: button-cta
       - page: 
         title: Check-in - Modal - Add passenger from other booking
         modules: 
           - module: modal-header
           - module: descriptive-headline
-          - module: Structure-headline
-          - module: Option-image
-          - module: Structure-headline
-          - module: Form
+          - module: structure-headline
+          - module: option-image
+          - module: structure-headline
+          - module: form
             submodules:
-              - sub: Input-fied
-              - sub: Input-field
-              - sub: Input-field
+              - sub: input
+              - sub: input
+              - sub: input
           - module: button-cta
       - page: 
         title: Check-in - Modal - Regulatory data
@@ -57,9 +57,9 @@ flows:
           - module: structure-headline
           - module: form
             submodules:
-              - sub: input-field
-              - sub: input-field
-              - sub: input-field
+              - sub: input
+              - sub: input
+              - sub: input
               - sub: dropdown
               - sub: check-box
               - sub: date-picker 
@@ -68,7 +68,7 @@ flows:
           - module: form
             submodules:
               - sub: dropdown
-              - sub: input-field
+              - sub: input
               - sub: dropdown
               - sub: date-picker
               - sub: dropdown
@@ -77,8 +77,8 @@ flows:
           - module: form
             submodules:
               - sub: dropdown
-              - sub: input-field
-              - sub: input-field
+              - sub: input
+              - sub: input
               - sub: text-block-small
           - module: check-box
           - module: button-cta
@@ -112,7 +112,7 @@ flows:
           - module: navigation-wizard
           - module: descriptive-headline
           - module: structure-headline
-          - module: options-image
+          - module: option-image
           - module: input
           - module: check-box
           - module: counter
@@ -170,7 +170,7 @@ flows:
           - module: search-widget-flight
           - module: accordion-search-widget
           - module: accordion-search-widget
-          - module: foooter
+          - module: footer
 
   # Check In Cancellation
   - title: 'Check-in cancellation'
@@ -262,7 +262,7 @@ flows:
         title: Flight - Search Origin & Destination (Modal)
         modules: 
           - module: modal-header
-          - module: input-field
+          - module: input
       - page: 
         title: Flight - Advanced search
         modules: 
@@ -273,7 +273,7 @@ flows:
           - module: radio-button
           - module: radio-button
           - module: structure-headline
-          - module: input-field
+          - module: input
           - module: structure-headline
           - module: date-picker-half
           - module: date-picker-half
@@ -286,7 +286,7 @@ flows:
           - module: structure-headline
           - module: check-box
           - module: check-box
-          - module: input-field
+          - module: input
           - module: structure-headline
           - module: multi-select
           - module: structure-headline
@@ -303,8 +303,8 @@ flows:
           - module: radio-button
           - module: structure-headline
           - module: multi-select
-          - module: input-field
-          - module: input-field
+          - module: input
+          - module: input
           - module: structure-headline
           - module: radio-button
           - module: radio-button
@@ -344,11 +344,11 @@ flows:
           - module: radio-button
 
           - module: structure-headline
-          - module: input-field
-          - module: input-field
+          - module: input
+          - module: input
 
           - module: structure-headline
-          - module: input-field
+          - module: input
 
           - module: structure-headline
           - module: radio-button
@@ -490,17 +490,17 @@ flows:
           - module: action-bar
           - module: descriptive-headline
           - module: structure-headline
-          - module: dropdown-small (half width)
-          - module: dropdown-small (half-width)
-          - module: input-field
-          - module: input-field
-          - module: input-field
+          - module: dropdown-half
+          - module: dropdown-half
+          - module: input
+          - module: input
+          - module: input
           - module: date-picker
           - module: structure-headline
-          - module: radio-button (half-width)
-          - module: radio-button (half-width)
-          - module: input-field
-          - module: input-field
+          - module: radio-button-half
+          - module: radio-button-half
+          - module: input
+          - module: input
           - module: button-cta
       - page: 
         title: Check-out - Step 1b - Contact
@@ -518,13 +518,13 @@ flows:
           - module: modal-header
           - module: descriptive-headline
           - module: dropdown
-          - module: input-field
-          - module: input-field
-          - module: input-field
+          - module: input
+          - module: input
+          - module: input
           - module: structure-headline
           - module: radio-button (half-width)
           - module: radio-button (half-width)
-          - module: input-field
+          - module: input
           - module: button-cta
 
       - page: 
@@ -553,13 +553,13 @@ flows:
           - module: structure-headline
           - module: radio-button
           - module: radio-button
-          - module: input-field
-          - module: input-field
-          - module: input-field
-          - module: input-field
-          - module: input-field
-          - module: input-field-half
-          - module: input-field-half
+          - module: input
+          - module: input
+          - module: input
+          - module: input
+          - module: input
+          - module: input-half
+          - module: input-half
           - module: dropdown
           - module: dropdown
           - module: check-box
@@ -587,17 +587,17 @@ flows:
           - module: option-image
           - module: structure-headline
           - module: option-image
-          - module: input-field
-          - module: input-field
+          - module: input
+          - module: input
           - module: dropdown-half
           - module: dropdown-half
-          - module: input-field-half
+          - module: input-half
           - module: info-half
           - module: structure-headline
-          - module: input-field
-          - module: input-field
-          - module: input-field-half
-          - module: input-field-half
+          - module: input
+          - module: input
+          - module: input-half
+          - module: input-half
           - module: dropdown
           - module: structure-headline
           - module: text-block-small
@@ -1047,36 +1047,174 @@ flows:
           - module: search-widget-flight
           - module: accordion-search-widget
           - module: accordion-search-widget
-          - module: foooter
+          - module: footer
 
   # Refund
   - title: 'Refund'
     pages: 
       - page: 
-        title: Refund - Step 1 - Flights & PAX
+        title: Refund - Step 1 - Flights & PAX (1 of 2)
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: product-item-flight-min
+          - module: action-bar
+          - module: product-item-flight-min
+          - module: action-bar
+          - module: add-module-confirmed-person
+          - module: add-module-confirmed-person
+          - module: add-module-confirmed-person
+          - module: check-box
+          - module: check-box
+          - module: button-cta
       - page: 
         title: Refund - Step 2 - Summary
+        modules:
+          - module: header-no-cart
+          - module: navigation-wizard
+          - module: descriptive-headline
+          - module: product-item-flight
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: structure-headline
+          - module: product-item-icon
+          - module: product-item-icon
+          - module: action-bar
+          - module: add-module-confirmed-payment
+          - module: sum-money-sub
+          - module: sum-money-sub
+          - module: sum-money
+          - module: notification-inline
+          - module: descriptive-headline
+          - module: text-block-small
+          - module: check-box
+          - module: total-price-footer
+          - module: footer
       - page: 
         title: Refund - Confirmation
-
+        modules:  
+          - module: header
+          - module: action-bar-page
+          - module: title
+          - module: notification
+          - module: structure-headline
+          - module: introduction
+          - module: descriptive-headline
+          - module: content-slider
+            submodules:
+              - sub: teaser
+          - module: descriptive-headline 
+          - module: introduction 
+          - module: partner-logos 
+          - module: content-slider
+            submodules:
+              - sub: teaser
+          - module: action-bar
+          - module: descriptive-headline 
+          - module: accordion-search-widget
+          - module: search-widget-flight
+          - module: accordion-search-widget
+          - module: accordion-search-widget
+          - module: footer
   # Shop
   - title: 'Shop'
     pages: 
       - page: 
-        title: SHO - Landingpage
+        title: SHO - Landingpage (1 of 2)
+        modules:  
+          - module: header
+          - module: highlight-area
+          - module: instant-form
+          - module: category-navigation-slider
+          - module: structure-headline
+          - module: teaser-slider
+          - module: expandable-widget
+          - module: expandable-widget
+          - module: footer
+          
       - page: 
-        title: SHO - Shop Product Selection Page
+        title: SHO - Shop Product Selection Page (1 of 2)
+        modules:  
+          - module: header
+          - module: plain-button-function
+          - module: product-image
+          - module: descriptive-headline
+          - module: navigation-page-tabs
+          - module: text-block-product-description
+          - module: descriptive-headline
+          - module: teaser-slider
+          - module: summary-footer
+          - module: footer
       - page: 
         title: SHO - Category page
+        modules:  
+          - module: header
+          - module: plain-button-function
+          - module: category-image-stage
+          - module: instant-form
+          - module: descriptive-headline
+          - module: introduction
+          - module: structure-headline
+          - module: filter-bar
+          - module: list-sorter
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: navigation-pagination
+          - module: category-navigation-slider
+          - module: footer
       - page: 
         title: SHO - Search results
+        modules:  
+          - module: header
+          - module: plain-button-function
+          - module: instant-form
+          - module: structure-headline
+          - module: filter-bar 
+          - module: list-sorter
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: teaser
+          - module: navigation-pagination
+          - module: footer
       - page: 
         title: SHO - Modal - Zoom View
+        modules: 
+          - module: zoomed-image
       - page: 
         title: SHO - Modal - Confirmation
+        modules: 
+          - module: modal-header
+          - module: teaser-confirmation
+          - module: button-cta
+          - module: plain-button
+          - module: descriptive-headline
+          - module: teaser-slider
 
   # Footer
   - title: 'Footer'
     pages: 
       - page: 
         title: Footer
+        modules: 
+          - module: action-bar
+          - module: expandable
+          - module: list-item-2nd
+          - module: instant-form

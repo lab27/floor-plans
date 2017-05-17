@@ -8,10 +8,17 @@ layout: default
 <div id="title-bar">
 
   <h1>Floor Plans</h1>
+  <ul class="nav">
+    {% for link in site.data.floorplans.flows %}
+    <li>
+      <a href="#{{link.title | slugify }}">{{link.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 
 {% for item in site.data.floorplans.flows %}
-    <h2 class="flow-title">{{forloop.index}}. {{item.title}}</h2>
+    <h2 class="flow-title" id="{{item.title | slugify}}">{{forloop.index}}. {{item.title}}</h2>
 <div class="flow">
 
     {% for page in item.pages %}

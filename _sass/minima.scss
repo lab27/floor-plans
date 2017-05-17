@@ -51,14 +51,7 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting"
 ;
 
-$color1: #76fbcc;
-$color2: #8aeca0;
-$color3: #a0da76;
-$color4: #b5c651;
-$color5: #c9af34;
-$color6: #da9627;
-$color7: #e8792d;
-$color8: #f0583f;
+
 
 $color1: #d93636;
 $color2: #b38686;
@@ -101,6 +94,15 @@ $color38: #ffbfd9;
 $color39: #bf3056;
 $color40: #591628;
 $color41: #332628;
+
+$color42: #76fbcc;
+$color43: #8aeca0;
+$color44: #a0da76;
+$color45: #b5c651;
+$color46: #c9af34;
+$color47: #da9627;
+$color48: #e8792d;
+$color49: #f0583f;
 
 body {
   padding: 0;
@@ -160,7 +162,7 @@ body {
   line-height: 1.1rem;
   font-weight: 700;
 }
-ul  {
+ul.modules  {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -179,11 +181,22 @@ ul  {
   }
 }
 
-.header {
+ul.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  li {
+    display: inline-block;
+    margin-right: 24px;
+  }
+}
+
+.header, .header-no-cart {
   background: $color1;
 }
 
-.navigation-wizard {
+.navigation-wizard, .navigation-pager {
   background-color: $color2;
 }
 
@@ -199,10 +212,176 @@ ul  {
   background-color: $color5;
 }
 
-.action-bar {
+.action-bar, .action-bar-page, .action-bar-light {
   background-color: $color6;
 }
 
 .footer {
   background-color: $color7;
 }
+
+.modal-header {
+  background: $color8;
+}
+
+.product-item-flight-list {
+  background: $color9;
+   
+}
+
+.product-item-flight {
+     background: $color10;
+   }
+
+.person-list {
+  background: $color11;
+}
+
+.person-item {
+  background: $color12;
+}
+
+.notification-inline, .notification, .notification-success {
+  background: red;
+}
+
+.button-cta {
+  background: dodgerblue;
+}
+
+.structure-headline {
+  background: $color13;
+}
+
+.form, .instant-form {
+  background: $color16;
+  * {
+    background: $color17;
+  }
+}
+
+.options-cockpit {
+  background: $color18;
+}
+
+.teaser {
+  background: pink;
+}
+
+.option-image {
+  background: $color19;
+}
+
+.input, .input-half {
+  background: $color20;
+}
+
+.input-half {
+  width: 50%;
+  float: left;
+}
+
+.check-box {
+  background: $color21;
+}
+
+.counter {
+  background: $color22;
+}
+
+.text-block-small {
+  background: $color23;
+}
+
+.mixed-item-list {
+  background: $color24;
+}
+
+.summary-footer {
+  background: $color25;
+}
+
+.product-item-flight, .product-item-flight-bound, .product-item-selectable {
+background: $color26;
+}
+
+.product-list {
+  background: $color27;
+}
+
+.add-module, .add-module-person {
+  background: $color28;
+}
+
+.list-sum {
+  background: $color29;
+}
+
+.image-grid-small {
+  background: $color30;
+}
+
+.total-price-footer {
+  background: $color31;
+}
+
+.title {
+  background: $color32;
+}
+
+.introduction {
+  background: $color33;
+}
+
+.content-slider {
+  background: $color34;
+}
+
+.partner-logos {
+  background: $color35;
+}
+
+.accordion-search-widget {
+  background: $color36;
+}
+
+.search-widget-flight {
+  background: $color37;
+}
+
+.person-checkable {
+  background: $color38;
+}
+
+.list-item-checkmark {
+  background: $color39;
+}
+
+.search-summary {
+  background: $color40;
+}
+
+.radio-button, .radio-button-half {
+  background: $color41;
+}
+
+.dropdown, .dropdown-half {
+  background: $color42;
+}
+
+.price-small {
+  background: $color43;
+}
+
+.product-item-car, .product-item {
+  background: $color44;
+}
+
+.date-picker {
+  background: $color45;
+}
+
+.sum-money {
+  background: $color46;
+}
+
