@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+
+
+    
+      <ul class="modules">
+    {% for module in page.modules %}
+    <li class="module {{module.module}}">
+        {{module.module}}
+        <ul class="submodules">
+            {% for submod in module.submodules %}
+            <li class="submodule {{submod.sub}}">{{submod.sub}}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+
+  </body>
+
+</html>

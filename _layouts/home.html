@@ -1,48 +1,72 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
 <div class="content-wrapper">
-  
 
-<div id="title-bar">
 
-  <h1>Floor Plans</h1>
-  <ul class="nav">
-    {% for link in site.data.floorplans.flows %}
-    <li>
-      <a href="#{{link.title | slugify }}">{{link.title}}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+  <div id="title-bar">
 
-{% for item in site.data.floorplans.flows %}
-    <h2 class="flow-title" id="{{item.title | slugify}}">{{forloop.index}}. {{item.title}}</h2>
-<div class="flow">
+    <h1>Floor Plans Overview</h1>
+    <h2>(<a href="links.html">See Pages</a>)</h2>
+    <ul class="nav">
+      {% for link in site.data.floorplans %} {% assign pagecount = 0 %}
+      <li>
+        <a href="#{{link.title | slugify }}">{{link.title}} 
+        {% for page in link.pages %}
+          {% assign pagecount = forloop.length %}
+        {% endfor %}
+        ({{pagecount}})
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% for item in site.data.floorplans %}
+  <h2 class="flow-title" id="{{item.title | slugify}}">{{forloop.index}}. {{item.title}}</h2>
+  <div class="flow">
 
     {% for page in item.pages %}
-  <div class="page-wrapper">
-          <h3 class="page-title">
-            {{page.title}}
-          </h3>
-        <div class="page">
-          <ul class="modules">
+    <div class="page-wrapper">
+      <h3 class="page-title">
+        {{page.title}}
+      </h3>
+      <div class="page">
+        <ul class="modules">
           {% for module in page.modules %}
-            <li class="module {{module.module}}">
-              {{module.module}}
-              <ul class="submodules">
+          <li class="module {{module.module}}">
+            {{module.module}}
+            <ul class="submodules">
               {% for submod in module.submodules %}
-                <li class="submodule {{submod.sub}}">{{submod.sub}}</li>
+              <li class="submodule {{submod.sub}}">{{submod.sub}}</li>
               {% endfor %}
-              </ul>
-            </li>
+            </ul>
+          </li>
           {% endfor %}
-          </ul>
-        </div>
-  </div>
+        </ul>
+      </div>
+    </div>
     {% endfor %}
-</div>
-{% endfor %}
-</div>
+  </div>
+  {% endfor %}
 
+  <h2>Ways to handle spacing:</h2>
+  <ol>
+    <li class="strike">Give Swiss some spacing classes to add wherever they need</li>
+    <li>Unic uses sibling selectors to determine spacing logic
+      <ul>
+        <h5>Pros:</h5>
+        <li>Could give us lots of control</li>
+        <li></li>
+        <h5>Cons:</h5>
+        <li>We must know exact structure</li>
+      </ul>
+    </li>
+    <li>Determine ALL possible combinations of modules, Set up specific rules how modules can be grouped/nested, and style them
+      accordingly.</li>
+  </ol>
+
+
+
+</div>

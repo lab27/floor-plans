@@ -356,7 +356,7 @@ body {
   line-height: 1.1rem;
   font-weight: 700;
 }
-ul.modules  {
+ul.modules, ul.submodules  {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -424,9 +424,7 @@ ul.nav {
    
 }
 
-.product-item-flight, .product-item-flight-selectable {
-     background: $color10;
-   }
+
 
 .person-list {
   background: $color11;
@@ -440,9 +438,7 @@ ul.nav {
   background: red;
 }
 
-.button-cta {
-  background: dodgerblue;
-}
+
 
 .structure-headline {
   background: $color13;
@@ -459,17 +455,7 @@ ul.nav {
   background: $color18;
 }
 
-.teaser {
-  background: pink;
-}
 
-.teaser-small {
-  background: darken(pink, 10%);
-}
-
-.teaser-slider, .teaser-confirmation {
-  background: darken(pink, 20%);
-}
 
 .option-image {
   background: $color19;
@@ -492,7 +478,7 @@ ul.nav {
   background: $color22;
 }
 
-.text-block-small {
+.text-block-small, .text-block-product-description {
   background: $color23;
 }
 
@@ -504,15 +490,13 @@ ul.nav {
   background: $color25;
 }
 
-.product-item-flight, .product-item-flight-min, .product-item-flight-bound, .product-item-selectable, .product-list-item {
-background: $color26;
-}
+
 
 .product-list {
   background: $color27;
 }
 
-.add-module, .add-module-person, .add-module-payment, .add-module-confirmed-person, .add-module-confirmed-payment, .add-module-confirmed  {
+.add-module, .add-module-address, .add-module-person, .add-module-payment, .add-module-confirmed-person, .add-module-confirmed-payment, .add-module-confirmed  {
   background: $color28;
 }
 
@@ -560,7 +544,7 @@ background: $color26;
   background: $color39;
 }
 
-.search-summary {
+.search-summary, .search-summary-flight {
   background: $color40;
 }
 
@@ -570,6 +554,11 @@ background: $color26;
 
 .dropdown, .dropdown-half {
   background: $color42;
+}
+
+.dropdown-half {
+  width:50%;
+  float: left;
 }
 
 .price-small {
@@ -602,7 +591,7 @@ background: $color26;
   background: $color48;
 }
 
-.expandable {
+.expandable, .expandable-widget {
   background: $color49;
 }
 
@@ -620,4 +609,131 @@ background: $color26;
 
 .option-segmented {
   background: $color52;
+}
+
+.button-cta {
+  background: $color53;
+  
+}
+
+.teaser {
+  background: $color54;
+}
+
+.teaser-small {
+  background: darken($color54, 10%);
+}
+
+.teaser-slider, .teaser-confirmation {
+  background: darken($color54, 20%);
+}
+
+.site-content {
+  background: $color55;
+}
+
+.pax-counter {
+  background: $color56;
+}
+
+.filter-bar {
+  background: $color57;
+}
+
+.list-sorter {
+  background: $color58;
+}
+
+.cabin-selection {
+  background: $color59;
+}
+
+.fare-selector {
+  background: $color60;
+}
+
+.text-item-list {
+  background: $color61;
+}
+
+.fare-label-half {
+  background: $color62;
+  width: 50%;
+  float: left;
+}
+
+.price-large-half {
+  background: $color63;
+  width: 50%;
+  float: left;
+}
+
+.info-half {
+  background: $color64;
+}
+
+.asterisk-text {
+  background: $color65;
+}
+
+.cockpit-stage {
+  background: $color66;
+}
+
+.plain-button-function, .plain-button-function-half {
+  background: $color67;
+}
+
+.plain-button-function-half {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+
+.cui-status {
+  background: $color68;
+}
+
+.link-list-item {
+  background: $color69;
+}
+
+.highlight-area {
+  background: $color70;
+}
+
+.category-navigation-slider {
+  background: $color71;
+}
+
+.product-image {
+  background: $color72;
+}
+
+.navigation-page-tabs {
+  background: $color73;
+}
+
+.category-image-stage {
+  background: $color74;
+}
+
+.zoomed-image {
+  background: $color75;
+}
+
+.plain-button {
+  background: $color76;
+}
+
+.list-item-2nd {
+  background: $color77;
+}
+
+.product-item-flight, .product-item-flight-selectable, .product-item-insurance, .product-item-voucher {
+     background: $color78;
+   }
+
+   .product-item-flight, .product-item-flight-min, .product-item-flight-bound, .product-item-selectable, .product-list-item {
+background: $color78;
 }

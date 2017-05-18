@@ -32,3 +32,10 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+page_gen-dirs: true
+page_gen:
+  - data: 'floorplans-flatter'
+    template: 'mod_page'
+    name: 'title'
+    dir: 'pages'
